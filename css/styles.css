@@ -262,6 +262,96 @@ p{
 
 
 
+/* login */
+
+.login{
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+.login .card{
+    width: 400px;
+    margin: auto;
+    text-align: center;
+}
+
+.login h1{
+    color: #F29F58;
+    font-size: 2.5rem;
+}
+
+.login input:focus {
+    outline: none; /* Remove default outline */
+    border: 1px solid #f8831d; /* Orange border */
+    box-shadow: 0 0 0 0.3rem #ffc694 !important; /* Light orange glow */
+}
+
+.login .btn-dark{
+    width: 325px;
+    height: 60px;
+    background-color: #F29F58;
+    border-color: #F29F58;
+    font-size: large;
+    margin-bottom: 8px;
+}
+
+.login .btn-dark:hover{
+    background-color: #dc7e2c;
+}
+
+.login .btn-dark:active{
+    background-color: #F29F58;
+    border-color: #F29F58;
+}
+
+.login .btn-outline-dark{
+    text-align: left;
+    width: 325px;
+    height: 60px;
+    color: #F29F58;
+    border-color: #F29F58;
+    font-weight: 600;
+    font-size: large;
+    margin-bottom: 8px;
+}
+
+.login .btn-outline-dark:hover{
+    background-color: #F29F58;
+    color: #fff;
+}
+
+.login .btn-outline-dark:active{
+    background-color: #dc7e2c;
+    border-color: #dc7e2c;
+}
+
+.login a{
+    text-decoration: none;
+    color: #F29F58;
+    font-weight: 500;
+}
+
+.login a:hover{
+    color: #dc7e2c;
+}
+
+.login p{
+    color: grey;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.login i{
+    margin: 0 10px;
+}
+
+.or{
+    padding: 3px;
+}
+
+
+
+
 @media (max-width: 1199.2px){
     h1{
         font-size: 4rem;
@@ -291,19 +381,26 @@ p{
 }
 
 @media (max-width: 991.2px){
+    #title h1{
+        background-color: #F29F58;
+        padding-bottom: 5%;
+        position: relative;
+        z-index: 1;
+    }
+
     #title{
         text-align: center;
+        padding-bottom: 0;
     }
 
     .title-row{
-        height: auto;
+        height: 700px;
     }
 
     .title-image{
-        transform: rotate(0);
         width: 60%;
         position: relative;
-        top: 10%;
+        bottom: 15%;
     }
 }
 
@@ -319,6 +416,10 @@ p{
     em{
         font-size: 1.2rem;
         font-weight: 400;
+    }
+
+    .title-row{
+        height: 600px;
     }
 
     .nav-btn-div{
@@ -361,6 +462,16 @@ p{
         font-size: 1.1rem;
     }
 
+    .title-row{
+        height: 480px;
+    }
+
+    .title-image{
+        width: 180px;
+        position: relative;
+        right: 10px;
+    }
+
     #hiw p{
         font-size: 1.1rem;
     }
@@ -380,5 +491,17 @@ p{
         padding-left: 10px;
     }
 
-}
+    .login .card{
+        width: 300px;
+        padding: 0;
+    }
 
+    .login .btn-dark{
+        width: 225px;
+    }
+    
+    .login .btn-outline-dark{
+        width: 225px;
+        font-size: .89rem;
+    }
+}
