@@ -11,18 +11,10 @@ h1{
     font-style: italic;
 }
 
-.coloured-section h1{
-    color: #fff;
-}
-
-.white-section h1{
-    color: #1B1833;
-}
-
 h2{
     font-family: "Ubuntu";
     font-size: 3rem;
-
+    
 }
 
 h3{
@@ -50,6 +42,11 @@ p{
     padding: 7% 12%;
 }
 
+.white-section{
+    background-color: #fff;
+    color: #1B1833;
+}
+
 .coloured-section{
     color: #fff;
     background-color: #F29F58;
@@ -60,9 +57,16 @@ p{
 /* NAVBAR */
 
 .navbar{
-    background-color: #F29F58;
     position: relative;
     z-index: 1;
+}
+
+.coloured-section .navbar{
+    background-color: #F29F58;
+}
+
+.white-section .navbar{
+    color: #F29F58;
 }
 
 .navbar-brand{
@@ -72,9 +76,21 @@ p{
     font-weight: 300;
 }
 
+.white-section .navbar-brand{
+    color: #F29F58;
+}
+
 .nav-link{
     font-size: 1.3rem;
     font-weight: 400;
+}
+
+.white-section .nav-link{
+    color: #F29F58;
+}
+
+.white-section .nav-link:hover{
+    color: #dc7e2c;
 }
 
 .nav-item{
@@ -89,7 +105,32 @@ p{
     color: #F29F58;
 }
 
+.nav-btn-1:active{
+    background-color: #F29F58;
+    color: #fff;
+}
+
+.white-section .nav-btn-1{
+    color: #F29F58;
+    border-color: #F29F58;
+}
+
+.white-section .nav-btn-1:hover{
+    color: white;
+    background-color: #F29F58;
+}
+
 .nav-btn-2{
+    color: #F29F58;
+}
+
+.white-section .nav-btn-2{
+    color: #fff;
+    background-color: #F29F58;
+    border-color: #F29F58;
+}
+
+.nav-btn-2:hover{
     color: #F29F58;
 }
 
@@ -97,17 +138,31 @@ p{
     color: #F29F58;
 }
 
+.white-section .nav-btn-2:hover{
+    color: white;
+    background-color: #dc7e2c;
+}
+
 
 
 
 /* title */
 
+.donate #title h1{
+    font-size: 3.5rem;
+}
+
+.donate .white-section h3{
+    color: rgb(153, 119, 144);
+}
+
 #title .container-fluid{
     padding-top: 2%;
     padding-left: 15%;
     padding-right: 15%;
-    padding-bottom: 0;
+    padding-bottom: 2%;
 }
+
 
 .title-btn-div{
     background-color: #F29F58;
@@ -132,10 +187,26 @@ p{
     font-size: 2.5rem;
     font-weight: 700;
     border-radius: 100px;
+    color: #fff;
+}
+
+.white-section .title-btn-2{
+    background-color: #F29F58; 
+    margin-top: 20px;  
+    margin-bottom: 20px;  
 }
 
 .title-btn-2:hover{
     color: #F29F58;
+}
+
+.white-section .title-btn-2:hover{
+    color: #fff;
+    background-color: #dc7e2c;
+}
+
+.white-section .title-btn-2:active{
+    background-color: #F29F58;
 }
 
 .title-image{
@@ -259,6 +330,23 @@ p{
     margin: 20px 12px;
 }
 
+.social-icon:hover{
+    margin: 20px 12px;
+    color: #f6d8bf;
+}
+
+.contact{
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.contact:hover{
+    color: #f6d8bf;
+}
+
+
 
 
 
@@ -352,6 +440,70 @@ p{
 
 
 
+
+/* donation0 */
+
+.donation-image{
+    width: 80%;
+    position: relative;
+    bottom: 33%;
+    left: 10%;  
+}
+
+.donation-button{
+    margin: 50px 0;
+}
+
+.donate .btn-outline-primary {
+    color: #fff !important;
+    background-color: #F29F58 !important;
+    border-color: #fff !important;
+    transition: all 0.3s ease;
+}
+
+.donate .btn-check:checked + .btn-outline-primary {
+    color: #fff !important;
+    background-color: #dc7e2c !important;
+    border-color: #fff !important;
+}
+
+.donate #wtd em{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #AB4459;
+}
+
+.donate .coloured-section a{
+    text-decoration: none;
+    color: white;
+}
+
+.donate .coloured-section a:hover{
+    color: #f6d8bf;
+}
+
+.volun-image{
+    width: 100%;
+    position: relative;
+    bottom: 33%;
+    left: 10%;  
+}
+
+.orien{
+    text-align: center;
+}
+
+video {
+    width: 100%;
+    max-width: 800px;
+}
+
+.form-check-reverse{
+    margin-left: 0;
+}
+
+
+
 @media (max-width: 1199.2px){
     h1{
         font-size: 4rem;
@@ -378,6 +530,13 @@ p{
     .story-conf{
         text-align: center;
     }
+
+    .volun-image{
+        width: 110%;
+        position: relative;
+        left: auto;
+        bottom: auto;
+    }
 }
 
 @media (max-width: 991.2px){
@@ -386,6 +545,10 @@ p{
         padding-bottom: 5%;
         position: relative;
         z-index: 1;
+    }
+
+    .donate #title h1{
+        background-color: #fff;
     }
 
     #title{
@@ -398,9 +561,27 @@ p{
     }
 
     .title-image{
-        width: 60%;
+        width: 62%;
         position: relative;
         bottom: 15%;
+    }
+
+    .donation-image{
+        width: 50%;
+        position: relative;
+        left: auto;
+        bottom: auto;
+        margin-top: 10%;
+        margin-bottom: 10%
+    }
+
+    .volun-image{
+        width: 80%;
+        position: relative;
+        left: auto;
+        bottom: auto;
+        margin-top: 10%;
+        margin-bottom: 10%
     }
 }
 
@@ -442,6 +623,11 @@ p{
     .story-image{
         width: 100px;
     }
+
+    .donation-image{
+        width: 80%;
+    }
+    
 }
 
 @media (max-width: 500px){
@@ -503,5 +689,9 @@ p{
     .login .btn-outline-dark{
         width: 225px;
         font-size: .89rem;
+    }
+
+    .contact{
+        font-size: 1rem;
     }
 }
