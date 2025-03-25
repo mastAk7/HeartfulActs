@@ -462,7 +462,7 @@ p{
 }
 
 .donate .btn-check:checked + .btn-outline-primary {
-    color: #fff !important;
+    color: fff !important;
     background-color: #dc7e2c !important;
     border-color: #fff !important;
 }
