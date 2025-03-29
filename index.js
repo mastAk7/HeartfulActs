@@ -33,6 +33,3 @@ app.get("/volunteer", (req, res) => {
 app.listen(port, () => {
     console.log(`listening on port ${port}`);
 });
-
-// Export for Vercel
-export default app;
