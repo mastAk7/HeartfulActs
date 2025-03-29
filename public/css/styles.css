@@ -350,9 +350,31 @@ p{
 
 
 
+
+.visible{
+    visibility: visible;
+}
+
+.blur-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px); /* Blurring Effect */
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent dark background */
+    z-index: 1000;
+}
+
+
 /* login */
 
 .login{
+    display: none;
+    position: fixed;
+    top: 0;
+    z-index: 1001;
     padding-top: 3%;
     padding-bottom: 3%;
 }
