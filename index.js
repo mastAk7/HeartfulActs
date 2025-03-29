@@ -1,28 +1,40 @@
 import express from 'express';
 import bodyParser from 'body-parser';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Create the Express app
 const app = express();
-const port = process.env.PORT || 3000;
 
-app.use(express.static("public"));
+// Configure Express
+app.use(express.static(path.join(__dirname, "public")));
+app.use(bodyParser.urlencoded({ extended: true }));
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
 
-app.use(bodyParser.urlencoded({ extended : true}))
-
-app.get("/", (req,res) => {
+// Routes
+app.get("/", (req, res) => {
     res.render("index.ejs");
-})
+});
 
-app.get("/donate", (req,res) => {
+app.get("/donate", (req, res) => {
     res.render("donate.ejs");
-})
+});
 
-app.get("/volunteer", (req,res) => {
+app.get("/volunteer", (req, res) => {
     res.render("volunteer.ejs");
-})
+});
 
-app.listen(port, (err) => {
-    if (err) throw err;
-    console.log(`listening on port ${port}`);
-})
+// Local development server
+if (process.env.NODE_ENV !== 'production') {
+    const port = process.env.PORT || 3000;
+    app.listen(port, () => {
+        console.log(`listening on port ${port}`);
+    });
+}
 
+// Export for Vercel
 export default app;
